@@ -2,8 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
-// import { withAuthenticator, Authenticator } from '@aws-amplify/ui-react'
-// import '@aws-amplify/ui-react/styles.css';
+import { withAuthenticator, Authenticator } from '@aws-amplify/ui-react'
+import '@aws-amplify/ui-react/styles.css';
 
 function App() {
   
@@ -28,7 +28,7 @@ function App() {
   }
 
   return (
-    //<Authenticator>
+    <Authenticator>
         <div className="App">
           <h1 align="left">BMI Calculator</h1>
           <table>
@@ -70,8 +70,8 @@ function App() {
               </tbody>
             </table>
         </div>
-    //</Authenticator>
+    </Authenticator>
   );
 }
 
-export default (App);
+export default withAuthenticator(App);
