@@ -1,7 +1,7 @@
 type Calculation @model @auth(rules: [{allow: public}]) {
   id: ID!
-  Height: Int
-  Weight: Int
+  Height: String
+  Weight: String
   BMI: Int
   Date: AWSDateTime
 }
