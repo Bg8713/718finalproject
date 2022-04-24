@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { withAuthenticator, Authenticator } from '@aws-amplify/ui-react'
 import '@aws-amplify/ui-react/styles.css';
+import { DataStore } from '@aws-amplify/datastore';
+import { Calculation } from './models';
 
 function App() {
   
@@ -13,13 +15,29 @@ function App() {
   const [currentTime, setCurrentTime] = useState('');
   const [user, setUser] = useState('');
   const [calcList, setCalcList] = useState([]);
+  const [models, setModels] = useState(await DataStore.query(Calculation));
+
+  function createCalc(){
+    await DataStore.save(
+      new Calculation({
+        "Height": height,
+        "Weight": weight,
+        "BMI": bmi,
+        "Date": "1970-01-01T12:30:23.999Z"
+      })
+    );
+  }
+
 
   useEffect(() => {
     updateList();
+    createCalc();
+    console.log(models);
   }, [bmi])
 
   function calc(){
     setBMI(703*(weight/(height**2)));
+    
   };
  
   function updateList(){
