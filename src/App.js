@@ -15,7 +15,7 @@ function App() {
   const [currentTime, setCurrentTime] = useState('');
   const [user, setUser] = useState('');
   const [calcList, setCalcList] = useState([]);
-  const [models, setModels] = useState(await DataStore.query(Calculation));
+  const [models, setModels] = useState('');
 
   function createCalc(){
     await DataStore.save(
@@ -28,7 +28,10 @@ function App() {
     );
   }
 
-
+  function fetchCalcs(){
+    let calcs = await DataStore.query(Calculation);
+    setModels(calcs);
+  }
   useEffect(() => {
     updateList();
     createCalc();
