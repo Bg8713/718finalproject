@@ -17,7 +17,7 @@ function App() {
   const [calcList, setCalcList] = useState([]);
   const [models, setModels] = useState('');
 
-  function createCalc(){
+  async function createCalc(){
     await DataStore.save(
       new Calculation({
         "Height": height,
@@ -28,10 +28,12 @@ function App() {
     );
   }
 
-  function fetchCalcs(){
+  async function fetchCalcs(){
     let calcs = await DataStore.query(Calculation);
+    console.log(calcs)
     setModels(calcs);
   }
+  
   useEffect(() => {
     updateList();
     createCalc();
