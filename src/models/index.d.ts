@@ -10,8 +10,8 @@ type CalculationMetaData = {
 
 export declare class Calculation {
   readonly id: string;
-  readonly Height?: number | null;
-  readonly Weight?: number | null;
+  readonly Height?: string | null;
+  readonly Weight?: string | null;
   readonly BMI?: number | null;
   readonly Date?: string | null;
   readonly createdAt?: string | null;

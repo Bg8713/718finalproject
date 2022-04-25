@@ -13,14 +13,14 @@ export const schema = {
                 "Height": {
                     "name": "Height",
                     "isArray": false,
-                    "type": "Int",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Weight": {
                     "name": "Weight",
                     "isArray": false,
-                    "type": "Int",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -83,5 +83,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "7e1ecd7093477d22c193b2fe1f8c18e4"
+    "version": "42a2a0ab65055983ea3bf05bc61fc16b"
 };
