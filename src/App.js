@@ -11,7 +11,7 @@ function App() {
   const [weight, setWeight] = useState('');
   const [bmi, setBMI] = useState(0);
   const [calcList, setCalcList] = useState([]);
-  const [models, setModels] = useState('');
+  const [models, setModels] = useState([]);
 
   async function createCalc(){
     await DataStore.save(
