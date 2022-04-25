@@ -26,6 +26,10 @@ function App() {
     let calcs = await DataStore.query(Calculation);
     setModels(calcs);
   }
+
+  useEffect(() => {
+    setModels([]);
+  },[''])
   
   useEffect(() => {
     if (bmi != 0){
