@@ -76,16 +76,16 @@ function App() {
               <th>Date</th>
             </tr>
           </thead>
-          <tbody>
+          {/* <tbody>
             {models.map((singleCalc) => 
               <tr>
                 <td key={singleCalc.Weight} >{singleCalc.Weight}</td>
                 <td key={singleCalc.Height} >{singleCalc.Height}</td>
                 <td key={singleCalc.BMI} >{singleCalc.BMI}</td>
-                <td key={singleCalc.createdAt}>{singleCalc.createdAt}</td>
+                <td key={singleCalc.createdAt} >{singleCalc.createdAt}</td>
               </tr>
             )}
-          </tbody>
+          </tbody> */}
         </table>
         <AmplifySignOut/>
     </div>
