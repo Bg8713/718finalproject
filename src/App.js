@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import { withAuthenticator, Authenticator, AmplifySignOut, Auth } from '@aws-amplify/ui-react'
+import { withAuthenticator, Authenticator, AmplifySignOut} from '@aws-amplify/ui-react'
 // import '@aws-amplify/ui-react/styles.css';
 import { DataStore } from '@aws-amplify/datastore';
 import { Calculation } from './models';
