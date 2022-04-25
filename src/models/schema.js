@@ -27,7 +27,7 @@ export const schema = {
                 "BMI": {
                     "name": "BMI",
                     "isArray": false,
-                    "type": "Int",
+                    "type": "Float",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -83,5 +83,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "42a2a0ab65055983ea3bf05bc61fc16b"
+    "version": "f52fd8cc7f1cde6e33d62d6a0ef147d8"
 };
