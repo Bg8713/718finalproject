@@ -1,7 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom/client';
 import { withAuthenticator, AmplifySignOut} from '@aws-amplify/ui-react'
 // import '@aws-amplify/ui-react/styles.css';
 import { DataStore } from '@aws-amplify/datastore';
@@ -12,8 +10,6 @@ function App() {
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
   const [bmi, setBMI] = useState(0);
-  const [currentTime, setCurrentTime] = useState('');
-  const [user, setUser] = useState('');
   const [calcList, setCalcList] = useState([]);
   const [models, setModels] = useState('');
 
