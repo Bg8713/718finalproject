@@ -58,11 +58,11 @@ function App() {
             <tbody>
               <tr>
                 <td align='right'><label id='height'>Height:</label></td>
-                <td align='left'><input type='text' id='height' value={height} onChange={e => setHeight(parseInt(e.target.value))}/></td>
+                <td align='left'><input type='text' id='height' value={height} onChange={e => setHeight(e.target.value)}/></td>
               </tr>
               <tr>
                 <td align='right'><label id="weight">Weight:</label></td>
-                <td align='left'><input type='text' id='weight' value={weight} onChange={e => setWeight(parseInt(e.target.value))}/></td>
+                <td align='left'><input type='text' id='weight' value={weight} onChange={e => setWeight(e.target.value)}/></td>
               </tr>
               <tr>
                 <td colSpan={2} align='center'><button id='calc' onClick={calc}>Calculate</button></td>
