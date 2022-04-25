@@ -3,6 +3,5 @@ type Calculation @model @auth(rules: [{allow: public}]) {
   Height: String
   Weight: String
   BMI: Float
-  Date: AWSDateTime
 }
  

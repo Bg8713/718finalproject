@@ -13,7 +13,6 @@ export declare class Calculation {
   readonly Height?: string | null;
   readonly Weight?: string | null;
   readonly BMI?: number | null;
-  readonly Date?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   constructor(init: ModelInit<Calculation, CalculationMetaData>);

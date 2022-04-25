@@ -22,8 +22,7 @@ function App() {
       new Calculation({
         "Height": height,
         "Weight": weight,
-        "BMI": bmi,
-        "Date": "1970-01-01T12:30:23.999Z"
+        "BMI": bmi
       })
     );
   }
@@ -36,7 +35,9 @@ function App() {
   
   useEffect(() => {
     updateList();
-    createCalc();
+    if (bmi != 0){
+      createCalc();
+    }
     fetchCalcs();
     console.log(models);
   }, [bmi])
