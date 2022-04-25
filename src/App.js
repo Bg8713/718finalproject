@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import { withAuthenticator, Authenticator, AmplifySignOut} from '@aws-amplify/ui-react'
+import { withAuthenticator, AmplifySignOut} from '@aws-amplify/ui-react'
 // import '@aws-amplify/ui-react/styles.css';
 import { DataStore } from '@aws-amplify/datastore';
 import { Calculation } from './models';
@@ -13,7 +13,7 @@ function App() {
   const [weight, setWeight] = useState('');
   const [bmi, setBMI] = useState(0);
   const [currentTime, setCurrentTime] = useState('');
-  const [user, setUser] = useState(Auth.currentUserInfo().username);
+  const [user, setUser] = useState('');
   const [calcList, setCalcList] = useState([]);
   const [models, setModels] = useState('');
 
@@ -51,7 +51,7 @@ function App() {
   }
 
   return (
-    <Authenticator>
+//<Authenticator>
         <div className="App">
           <h1 align="left">BMI Calculator</h1>
           <table>
@@ -94,7 +94,7 @@ function App() {
             </table>
             <AmplifySignOut/>
         </div>
-    </Authenticator>
+    //</Authenticator>
   );
 }
 
