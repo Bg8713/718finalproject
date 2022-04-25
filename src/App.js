@@ -10,7 +10,8 @@ function App() {
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
   const [bmi, setBMI] = useState(0);
-  const [models, setModels] = useState([]);
+  const [calcs, setCalcs] = useState([]);
+
 
   async function createCalc(){
     await DataStore.save(
@@ -23,12 +24,12 @@ function App() {
   }
 
   async function fetchCalcs(){
-    let calcs = await DataStore.query(Calculation);
-    setModels(calcs);
+    let allCalcs = await DataStore.query(Calculation);
+    setCalcs(allCalcs);
   }
 
   useEffect(() => {
-    setModels([]);
+    setCalcs([]);
   },[''])
   
   useEffect(() => {
@@ -36,12 +37,10 @@ function App() {
       createCalc();
     }
     fetchCalcs();
-    console.log(models);
   }, [bmi])
 
   function calc(){
     setBMI(703*(weight/(height**2)));
-    
   };
 
   return (
@@ -77,7 +76,7 @@ function App() {
             </tr>
           </thead>
           <tbody>
-            {models.map((singleCalc) => 
+            {calcs.map((singleCalc) => 
               <tr>
                 <td key={singleCalc.Weight} >{singleCalc.Weight}</td>
                 <td key={singleCalc.Height} >{singleCalc.Height}</td>
