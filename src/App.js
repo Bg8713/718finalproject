@@ -78,6 +78,7 @@ function App() {
                   <th>Weight</th>
                   <th>Height</th>
                   <th>BMI</th>
+                  <th>Date</th>
                 </tr>
               </thead>
               <tbody>
@@ -86,6 +87,7 @@ function App() {
                     <td key={singleCalc.Weight} >{singleCalc.Weight}</td>
                     <td key={singleCalc.Height} >{singleCalc.Height}</td>
                     <td key={singleCalc.BMI} >{singleCalc.BMI}</td>
+                    <td key={singleCalc.createdAt}>{singleCalc.createdAt}</td>
                   </tr>
                 )}
               </tbody>
