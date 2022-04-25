@@ -81,11 +81,11 @@ function App() {
                 </tr>
               </thead>
               <tbody>
-                {calcList.filter(entry => entry[2]>0).map((singleCalc) => 
+                {models.map((singleCalc) => 
                   <tr>
-                    <td key={singleCalc[0]} >{singleCalc[0]}</td>
-                    <td key={singleCalc[1]} >{singleCalc[1]}</td>
-                    <td key={singleCalc[2]} >{singleCalc[2]}</td>
+                    <td key={singleCalc.Weight} >{singleCalc.Weight}</td>
+                    <td key={singleCalc.Height} >{singleCalc.Height}</td>
+                    <td key={singleCalc.BMI} >{singleCalc.BMI}</td>
                   </tr>
                 )}
               </tbody>
