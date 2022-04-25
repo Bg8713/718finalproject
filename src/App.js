@@ -37,6 +37,7 @@ function App() {
   useEffect(() => {
     updateList();
     createCalc();
+    fetchCalcs();
     console.log(models);
   }, [bmi])
 
