@@ -76,7 +76,7 @@ function App() {
             </tr>
           </thead>
           <tbody>
-            {calcs.slice(17).map((singleCalc) => 
+            {calcs.map((singleCalc) => 
               <tr>
                 <td key={singleCalc.Weight} >{singleCalc.Weight}</td>
                 <td key={singleCalc.Height} >{singleCalc.Height}</td>
